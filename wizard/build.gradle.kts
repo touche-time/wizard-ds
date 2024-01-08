@@ -60,16 +60,17 @@ dependencies {
 val githubProperties = Properties()
 githubProperties.load(FileInputStream(rootProject.file("github.properties")))
 
-val getVersionName = { "1.0.0" } // Replace with version Name
-val getArtifactId = { "wizardds" } // Replace with library name ID
+val getVersionName = { "0.0.1" } // Replace with version Name
+val getWizardArtifactId = { "wizardds" } // Replace with library name ID
 
 publishing {
     publications {
-        create<MavenPublication>("bar") {
-            groupId = "com.touchetime.wizard" // Replace with group ID
-            artifactId = getArtifactId()
+        register<MavenPublication>("release") {
+            groupId = "com.touchetime" // Replace with group ID
+            artifactId = getWizardArtifactId()
             version = getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
+
+            afterEvaluate { from(components["release"]) }
         }
     }
 
@@ -80,7 +81,8 @@ publishing {
 
             credentials {
                 username = (githubProperties["gpr.usr"] ?: System.getenv("GPR_USER")).toString()
-                password = (githubProperties["gpr.key"] ?: System.getenv("GPR_API_KEY")).toString()
+                password =
+                    (githubProperties["gpr.key"] ?: System.getenv("GPR_API_KEY")).toString()
             }
         }
     }
