@@ -57,8 +57,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-val githubProperties = Properties()
-githubProperties.load(FileInputStream(rootProject.file("github.properties")))
+//val githubProperties = Properties()
+//githubProperties.load(FileInputStream(rootProject.file("github.properties")))
 
 val getVersionName = { "0.0.1" } // Replace with version Name
 val getWizardArtifactId = { "wizardds" } // Replace with library name ID
@@ -74,16 +74,16 @@ publishing {
         }
     }
 
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/GITHUB_USERID/REPOSITORY")
-
-            credentials {
-                username = (githubProperties["gpr.usr"] ?: System.getenv("GPR_USER")).toString()
-                password =
-                    (githubProperties["gpr.key"] ?: System.getenv("GPR_API_KEY")).toString()
-            }
-        }
-    }
+//    repositories {
+//        maven {
+//            name = "GitHubPackages"
+//            url = uri("https://maven.pkg.github.com/GITHUB_USERID/REPOSITORY")
+//
+//            credentials {
+//                username = (githubProperties["gpr.usr"] ?: System.getenv("GPR_USER")).toString()
+//                password =
+//                    (githubProperties["gpr.key"] ?: System.getenv("GPR_API_KEY")).toString()
+//            }
+//        }
+//    }
 }
