@@ -13,7 +13,7 @@
 ### Step 2 [build.gradle]: Add the dependency ###
 
 	dependencies {
-	        implementation 'com.github.touche-time:wizard-ds:Tag'
+	        implementation 'com.github.touche-time:wizard-ds:<version>'
 	}
 
 ### Current Version: 0.0.1 ###
