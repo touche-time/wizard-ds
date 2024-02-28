@@ -1,6 +1,4 @@
 import org.gradle.api.publish.maven.MavenPublication
-import java.io.FileInputStream
-import java.util.Properties
 
 plugins {
     id("com.android.library")
@@ -52,15 +50,14 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
 
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-//val githubProperties = Properties()
-//githubProperties.load(FileInputStream(rootProject.file("github.properties")))
-
-val getVersionName = { "0.0.1" } // Replace with version Name
+val getVersionName = { "0.0.2" } // Replace with version Name
 val getWizardArtifactId = { "wizardds" } // Replace with library name ID
 
 publishing {
@@ -73,17 +70,4 @@ publishing {
             afterEvaluate { from(components["release"]) }
         }
     }
-
-//    repositories {
-//        maven {
-//            name = "GitHubPackages"
-//            url = uri("https://maven.pkg.github.com/GITHUB_USERID/REPOSITORY")
-//
-//            credentials {
-//                username = (githubProperties["gpr.usr"] ?: System.getenv("GPR_USER")).toString()
-//                password =
-//                    (githubProperties["gpr.key"] ?: System.getenv("GPR_API_KEY")).toString()
-//            }
-//        }
-//    }
 }
