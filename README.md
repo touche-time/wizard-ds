@@ -1,5 +1,7 @@
 # Wizard DS #
 
+https://jitpack.io/#touche-time/wizard-ds
+
 ### Step 1 [settings.gradle]: Add it in your root build.gradle at the end of repositories: ###
 
 	dependencyResolutionManagement {
