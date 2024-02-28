@@ -1,4 +1,4 @@
-package com.touchetime.wizardds.ui.theme
+package com.touchetime.wizardds.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

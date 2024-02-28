@@ -60,6 +60,12 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+
+    // Accompanist
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
+
     implementation(project(":wizard"))
 
     testImplementation("junit:junit:4.13.2")

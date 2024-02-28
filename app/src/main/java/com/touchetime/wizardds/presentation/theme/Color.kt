@@ -1,4 +1,4 @@
-package com.touchetime.wizardds.ui.theme
+package com.touchetime.wizardds.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
