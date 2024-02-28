@@ -57,7 +57,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-val getVersionName = { "0.0.1" } // Replace with version Name
+val getVersionName = { "0.0.2" } // Replace with version Name
 val getWizardArtifactId = { "wizardds" } // Replace with library name ID
 
 publishing {
