@@ -5,10 +5,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.fontResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import com.touchetime.wizard.utils.colors.WizardColors
 
@@ -33,19 +30,15 @@ import com.touchetime.wizard.utils.colors.WizardColors
 fun WizardText(
     modifier: Modifier = Modifier,
     text: String,
-    style: WizardTextStyle,
-    textColor: Color = WizardColors.colors().foregroundPrimary,
+    style: TextStyle = WizardTextStyle.labelMedium,
+    textColor: Color = WizardColors.colors().contentBrand,
     backgroundColor: Color = Color.Transparent,
-    textAlign: TextAlign = TextAlign.Start
+    textAlign: TextAlign = TextAlign.Start,
 ) {
     Text(
         text = text,
         color = textColor,
-        fontWeight = FontWeight(style.weight),
-        fontFamily = style.font,
-        fontSize = style.size,
-        letterSpacing = style.letterSpacing,
-        lineHeight = style.lineHeight,
+        style = style,
         textAlign = textAlign,
         modifier = modifier.background(backgroundColor),
     )

@@ -8,6 +8,7 @@ object WizardGlobalSpacing {
     val small = WizardPrimitiveSize.size80
     val middle = WizardPrimitiveSize.size120
     val normal = WizardPrimitiveSize.size160
+    val xxNormal = WizardPrimitiveSize.size200
     val xNormal = WizardPrimitiveSize.size240
     val large = WizardPrimitiveSize.size320
     val xLarge = WizardPrimitiveSize.size400

@@ -1,7 +1,7 @@
 package com.touchetime.wizard.components.button
 
-enum class WizardBackgroundButtonType {
+enum class WizardButtonType {
     SOLID,
     OUTLINED,
-    GHOST
+    GHOST,
 }

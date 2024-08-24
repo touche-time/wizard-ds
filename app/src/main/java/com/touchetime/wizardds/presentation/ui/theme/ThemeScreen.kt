@@ -22,27 +22,21 @@ fun ThemeScreen(updateTheme: (ThemeType) -> Unit) {
     ) {
         WizardText(
             text = "Themes",
-            style = WizardTextStyle.DisplayLarge,
+            style = WizardTextStyle.displayLarge,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
         )
 
         WizardButton(
             text = "Dark",
-            buttonStyle = WizardButtonStyle.PrimarySmallMatchSolid,
+            buttonStyle = WizardButtonStyle.PrimarySolid,
             onClick = { updateTheme(ThemeType.DARK) },
         )
 
         WizardButton(
             text = "Light",
-            buttonStyle = WizardButtonStyle.PrimarySmallMatchSolid,
+            buttonStyle = WizardButtonStyle.PrimarySolid,
             onClick = { updateTheme(ThemeType.LIGHT) },
-        )
-
-        WizardButton(
-            text = "Paris 2024",
-            buttonStyle = WizardButtonStyle.PrimarySmallMatchSolid,
-            onClick = { updateTheme(ThemeType.PARIS_2024) },
         )
     }
 }

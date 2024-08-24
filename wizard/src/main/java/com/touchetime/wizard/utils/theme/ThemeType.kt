@@ -2,8 +2,7 @@ package com.touchetime.wizard.utils.theme
 
 enum class ThemeType {
     LIGHT,
-    DARK,
-    PARIS_2024;
+    DARK;
 
     companion object {
         fun getByName(themeType: String?): ThemeType {

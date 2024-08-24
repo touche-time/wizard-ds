@@ -66,36 +66,36 @@ fun WizardSnackBar(
     modifier: Modifier = Modifier,
     message: String,
     @DrawableRes icon: Int? = null,
-    visible: MutableState<Boolean>
+    visible: MutableState<Boolean>,
 ) {
     AnimatedVisibility(
         visible = visible.value,
         enter = slideInHorizontally(initialOffsetX = { it }),
-        exit = slideOutHorizontally(targetOffsetX = { -it })
+        exit = slideOutHorizontally(targetOffsetX = { -it }),
     ) {
         Box(
-            modifier = modifier
-                .fillMaxWidth()
-                .clip(shape = RoundedCornerShape(WizardGlobalRadius.middle))
-                .background(WizardColors.colors().backgroundSecondary) // TODO: Change this color [WE]
-
+            modifier =
+                modifier
+                    .fillMaxWidth()
+                    .clip(shape = RoundedCornerShape(WizardGlobalRadius.middle))
+                    .background(WizardColors.colors().backgroundSecondary), // TODO: Change this color [WE]
         ) {
             Row(
                 modifier = Modifier.padding(all = WizardGlobalSpacing.small),
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.CenterVertically,
             ) {
                 icon?.let {
                     Icon(
                         painter = painterResource(id = icon),
                         modifier = Modifier.padding(end = WizardGlobalSpacing.small),
                         tint = WizardColors.colors().backgroundPrimary, // TODO: Change this color [WE]
-                        contentDescription = EMPTY_STRING
+                        contentDescription = EMPTY_STRING,
                     )
                 }
 
                 WizardText(
                     text = message,
-                    style = WizardTextStyle.DisplayLarge
+                    style = WizardTextStyle.displayLarge,
                 )
             }
         }

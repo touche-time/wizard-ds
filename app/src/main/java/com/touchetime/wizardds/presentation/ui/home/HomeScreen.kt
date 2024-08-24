@@ -26,32 +26,32 @@ fun HomeScreen(
     ) {
         WizardText(
             text = "Components",
-            style = WizardTextStyle.DisplayLarge,
+            style = WizardTextStyle.displayLarge,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
         )
 
         WizardButton(
             text = "Button",
-            buttonStyle = WizardButtonStyle.PrimarySmallMatchSolid,
+            buttonStyle = WizardButtonStyle.PrimarySolid,
             onClick = goToButton,
         )
 
         WizardButton(
             text = "Text",
-            buttonStyle = WizardButtonStyle.PrimarySmallMatchSolid,
+            buttonStyle = WizardButtonStyle.PrimarySolid,
             onClick = goToText,
         )
 
         WizardButton(
             text = "Loading",
-            buttonStyle = WizardButtonStyle.PrimarySmallMatchSolid,
+            buttonStyle = WizardButtonStyle.PrimarySolid,
             onClick = goToLoading,
         )
 
         WizardButton(
             text = "Theme",
-            buttonStyle = WizardButtonStyle.PrimarySmallMatchSolid,
+            buttonStyle = WizardButtonStyle.PrimarySolid,
             onClick = goToTheme,
         )
     }

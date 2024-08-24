@@ -5,74 +5,63 @@ import com.touchetime.wizard.utils.theme.ThemeManager
 import com.touchetime.wizard.utils.theme.ThemeType
 
 object WizardColors {
-    fun colors(): WizardThemeColors {
-        return when (ThemeManager.currentTheme) {
+    fun colors(): WizardThemeColors =
+        when (ThemeManager.currentTheme) {
             ThemeType.DARK -> darkColors
             ThemeType.LIGHT -> lightColors
-            ThemeType.PARIS_2024 -> parisColors
         }
-    }
 
-    private val darkColors = WizardThemeColors.create(
-        backgroundPrimary = WizardPrimitiveColor.neutralDark0,
-        backgroundSecondary = WizardPrimitiveColor.neutralDark200,
-        backgroundTertiary = WizardPrimitiveColor.neutralDark400,
-        backgroundDisabled = WizardPrimitiveColor.neutralDark100,
-        backgroundInversePrimary = WizardPrimitiveColor.neutralDark1100,
-        backgroundInverseSecondary = WizardPrimitiveColor.neutralDark900,
-        backgroundInverseDisabled = WizardPrimitiveColor.neutralDark1000,
-        backgroundButtonPrimary = WizardPrimitiveColor.neutralDark1100,
-        backgroundButtonDisabled = WizardPrimitiveColor.neutralDark100,
-        foregroundPrimary = WizardPrimitiveColor.neutralDark1100,
-        foregroundSecondary = WizardPrimitiveColor.neutralDark900,
-        foregroundTertiary = WizardPrimitiveColor.neutralDark700,
-        foregroundQuaternary = WizardPrimitiveColor.orange500,
-        foregroundDisabled = WizardPrimitiveColor.neutralDark500,
-        foregroundInversePrimary = WizardPrimitiveColor.neutralDark0,
-        foregroundInverseSecondary = WizardPrimitiveColor.neutralDark200,
-        foregroundInverseTertiary = WizardPrimitiveColor.neutralDark400,
-        foregroundInverseDisabled = WizardPrimitiveColor.neutralDark500
-    )
+    private val darkColors =
+        WizardThemeColors.create(
+            backgroundBrand = WizardPrimitiveColor.brand400,
+            backgroundBrandLight = WizardPrimitiveColor.brand800,
+            backgroundPrimary = WizardPrimitiveColor.neutralDark0,
+            backgroundSecondary = WizardPrimitiveColor.neutralDark200,
+            backgroundTertiary = WizardPrimitiveColor.neutralDark300,
+            backgroundInverse = WizardPrimitiveColor.neutralDark1100,
+            backgroundAlwaysDark = WizardPrimitiveColor.neutralDark0,
+            backgroundAlwaysLight = WizardPrimitiveColor.neutralDark1100,
+            contentBrand = WizardPrimitiveColor.brand400,
+            contentBrandLight = WizardPrimitiveColor.brand800,
+            contentPrimary = WizardPrimitiveColor.neutralDark1100,
+            contentSecondary = WizardPrimitiveColor.neutralDark900,
+            contentTertiary = WizardPrimitiveColor.neutralDark800,
+            contentDisabled = WizardPrimitiveColor.neutralDark500,
+            contentInverse = WizardPrimitiveColor.neutralDark0,
+            contentAlwaysDark = WizardPrimitiveColor.neutralDark0,
+            contentAlwaysLight = WizardPrimitiveColor.neutralDark1100,
+            strokeBrand = WizardPrimitiveColor.brand400,
+            strokeBrandLight = WizardPrimitiveColor.brand900,
+            strokePrimary = WizardPrimitiveColor.neutralDark200,
+            strokeSecondary = WizardPrimitiveColor.neutralDark300,
+            strokeTertiary = WizardPrimitiveColor.neutralDark400,
+            strokeInverse = WizardPrimitiveColor.neutralDark900,
+        )
 
-    private val lightColors = WizardThemeColors.create(
-        backgroundPrimary = WizardPrimitiveColor.neutralLight0,
-        backgroundSecondary = WizardPrimitiveColor.neutralLight100,
-        backgroundTertiary = WizardPrimitiveColor.neutralLight200,
-        backgroundDisabled = WizardPrimitiveColor.neutralLight100,
-        backgroundInversePrimary = WizardPrimitiveColor.neutralLight1100,
-        backgroundInverseSecondary = WizardPrimitiveColor.neutralLight900,
-        backgroundInverseDisabled = WizardPrimitiveColor.neutralLight1000,
-        backgroundButtonPrimary = WizardPrimitiveColor.orange500,
-        backgroundButtonDisabled = WizardPrimitiveColor.neutralLight200,
-        foregroundPrimary = WizardPrimitiveColor.neutralLight1100,
-        foregroundSecondary = WizardPrimitiveColor.neutralLight800,
-        foregroundTertiary = WizardPrimitiveColor.neutralLight700,
-        foregroundQuaternary = WizardPrimitiveColor.orange600,
-        foregroundDisabled = WizardPrimitiveColor.neutralLight300,
-        foregroundInversePrimary = WizardPrimitiveColor.neutralLight0,
-        foregroundInverseSecondary = WizardPrimitiveColor.neutralLight200,
-        foregroundInverseTertiary = WizardPrimitiveColor.neutralLight400,
-        foregroundInverseDisabled = WizardPrimitiveColor.neutralLight500
-    )
-
-    private val parisColors = WizardThemeColors.create(
-        backgroundPrimary = WizardPrimitiveColor.parisBlueDark,
-        backgroundSecondary = WizardPrimitiveColor.parisBluePrimary,
-        backgroundTertiary = WizardPrimitiveColor.parisBlueMiddle,
-        backgroundDisabled = WizardPrimitiveColor.neutralDark1100, // TODO: Change this color [WE]
-        backgroundInversePrimary = WizardPrimitiveColor.neutralLight1100,
-        backgroundInverseSecondary = WizardPrimitiveColor.neutralDark900,
-        backgroundInverseDisabled = WizardPrimitiveColor.neutralDark1000,
-        backgroundButtonPrimary = WizardPrimitiveColor.parisPurpleMiddle,
-        backgroundButtonDisabled = WizardPrimitiveColor.parisPurpleDark,
-        foregroundPrimary = WizardPrimitiveColor.neutralDark1100,
-        foregroundSecondary = WizardPrimitiveColor.neutralDark800,
-        foregroundTertiary = WizardPrimitiveColor.neutralDark600,
-        foregroundQuaternary = WizardPrimitiveColor.orange500,
-        foregroundDisabled = WizardPrimitiveColor.neutralLight800,
-        foregroundInversePrimary = WizardPrimitiveColor.neutralDark0,
-        foregroundInverseSecondary = WizardPrimitiveColor.neutralDark200,
-        foregroundInverseTertiary = WizardPrimitiveColor.neutralDark400,
-        foregroundInverseDisabled = WizardPrimitiveColor.neutralDark500
-    )
+    private val lightColors =
+        WizardThemeColors.create(
+            backgroundBrand = WizardPrimitiveColor.brand600,
+            backgroundBrandLight = WizardPrimitiveColor.brand100,
+            backgroundPrimary = WizardPrimitiveColor.neutralLight200,
+            backgroundSecondary = WizardPrimitiveColor.neutralLight200,
+            backgroundTertiary = WizardPrimitiveColor.neutralLight300,
+            backgroundInverse = WizardPrimitiveColor.neutralLight1100,
+            backgroundAlwaysDark = WizardPrimitiveColor.neutralLight1100,
+            backgroundAlwaysLight = WizardPrimitiveColor.neutralLight0,
+            contentBrand = WizardPrimitiveColor.brand600,
+            contentPrimary = WizardPrimitiveColor.brand100,
+            contentBrandLight = WizardPrimitiveColor.neutralLight1100,
+            contentSecondary = WizardPrimitiveColor.neutralLight900,
+            contentTertiary = WizardPrimitiveColor.neutralLight800,
+            contentDisabled = WizardPrimitiveColor.neutralLight500,
+            contentInverse = WizardPrimitiveColor.neutralLight0,
+            contentAlwaysDark = WizardPrimitiveColor.neutralLight1100,
+            contentAlwaysLight = WizardPrimitiveColor.neutralLight0,
+            strokeBrand = WizardPrimitiveColor.brand600,
+            strokeBrandLight = WizardPrimitiveColor.brand200,
+            strokePrimary = WizardPrimitiveColor.neutralLight200,
+            strokeSecondary = WizardPrimitiveColor.neutralLight300,
+            strokeTertiary = WizardPrimitiveColor.neutralLight400,
+            strokeInverse = WizardPrimitiveColor.neutralLight900,
+        )
 }
