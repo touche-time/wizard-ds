@@ -137,5 +137,47 @@ fun ButtonScreen() {
             enabled = false,
             onClick = {},
         )
+
+        WizardButton(
+            text = "Error Light Enabled",
+            buttonStyle = WizardButtonStyle.ErrorLight,
+            enabled = true,
+            onClick = {},
+        )
+
+        WizardButton(
+            text = "Error Light Disabled",
+            buttonStyle = WizardButtonStyle.ErrorLight,
+            enabled = true,
+            onClick = {},
+        )
+
+        WizardButton(
+            text = "Error Outlined Enabled",
+            buttonStyle = WizardButtonStyle.ErrorOutlined,
+            enabled = true,
+            onClick = {},
+        )
+
+        WizardButton(
+            text = "Error Outlined Disabled",
+            buttonStyle = WizardButtonStyle.ErrorOutlined,
+            enabled = true,
+            onClick = {},
+        )
+
+        WizardButton(
+            text = "Error Ghost Enabled",
+            buttonStyle = WizardButtonStyle.ErrorGhost,
+            enabled = true,
+            onClick = {},
+        )
+
+        WizardButton(
+            text = "Error Ghost Disabled",
+            buttonStyle = WizardButtonStyle.ErrorGhost,
+            enabled = true,
+            onClick = {},
+        )
     }
 }

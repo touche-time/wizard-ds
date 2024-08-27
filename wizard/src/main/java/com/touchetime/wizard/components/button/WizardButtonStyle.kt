@@ -77,6 +77,31 @@ sealed class WizardButtonStyle(
         contentColorDisable = WizardColors.colors().contentDisabled,
     )
 
+    // Region error
+    object ErrorLight : WizardButtonStyle(
+        buttonType = WizardButtonType.SOLID,
+        containerColorEnable = WizardColors.colors().backgroundErrorPrimary,
+        containerColorDisable = WizardColors.colors().backgroundErrorSecondary,
+        contentColorEnable = WizardColors.colors().contentPrimary,
+        contentColorDisable = WizardColors.colors().contentDisabled,
+    )
+
+    object ErrorOutlined : WizardButtonStyle(
+        buttonType = WizardButtonType.OUTLINED,
+        containerColorEnable = WizardColors.colors().backgroundErrorPrimary,
+        containerColorDisable = WizardColors.colors().backgroundErrorSecondary,
+        contentColorEnable = WizardColors.colors().contentPrimary,
+        contentColorDisable = WizardColors.colors().contentDisabled,
+    )
+
+    object ErrorGhost : WizardButtonStyle(
+        buttonType = WizardButtonType.GHOST,
+        containerColorEnable = Color.Transparent,
+        containerColorDisable = Color.Transparent,
+        contentColorEnable = WizardColors.colors().backgroundErrorPrimary,
+        contentColorDisable = WizardColors.colors().backgroundErrorSecondary,
+    )
+
     companion object {
         @Composable
         fun getContainerColor(
