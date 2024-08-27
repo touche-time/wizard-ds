@@ -30,7 +30,7 @@ import com.touchetime.wizard.utils.colors.WizardColors
 fun WizardText(
     modifier: Modifier = Modifier,
     text: String,
-    style: TextStyle = WizardTextStyle.labelMedium,
+    style: TextStyle = WizardTextStyle.primaryBodyMiddleBold,
     textColor: Color = WizardColors.colors().contentBrand,
     backgroundColor: Color = Color.Transparent,
     textAlign: TextAlign = TextAlign.Start,

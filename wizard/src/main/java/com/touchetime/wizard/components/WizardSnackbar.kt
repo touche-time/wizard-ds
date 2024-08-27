@@ -95,7 +95,7 @@ fun WizardSnackBar(
 
                 WizardText(
                     text = message,
-                    style = WizardTextStyle.displayLarge,
+                    style = WizardTextStyle.primaryDisplayLargeRegular,
                 )
             }
         }

@@ -83,7 +83,7 @@ fun WizardButton(
                         color =
                             buttonStyle.contentColorEnable.takeIf { enabled }
                                 ?: buttonStyle.contentColorDisable,
-                        style = WizardTextStyle.labelMedium,
+                        style = WizardTextStyle.primaryBodyMiddleBold,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.align(alignment = Alignment.Center),
                     )

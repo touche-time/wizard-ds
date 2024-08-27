@@ -5,13 +5,13 @@ import androidx.compose.ui.text.font.FontFamily
 import com.touchetime.wizard.R
 
 internal object WizardPrimitiveFonts {
+    // Dm Sans
+    val DmSansBold = FontFamily(Font(R.font.dm_sans_bold))
+    val DmSansMedium = FontFamily(Font(R.font.dm_sans_medium))
+    val DmSansRegular = FontFamily(Font(R.font.dm_sans_regular))
 
-    // Cabinet Grotesk
-    val CabinetGroteskBold = FontFamily(Font(R.font.cabinet_grotesk_bold))
-    val CabinetGroteskExtraBold = FontFamily(Font(R.font.cabinet_grotesk_extra_bold))
-
-
-    // Archivo
-    val ArchivoRegular = FontFamily(Font(R.font.archivo_regular))
-    val ArchivoSemibold = FontFamily(Font(R.font.archivo_semi_bold))
+    // Fluro
+    val FluroBold = FontFamily(Font(R.font.fluro_bold))
+    val FluroMedium = FontFamily(Font(R.font.fluro_medium))
+    val FluroRegular = FontFamily(Font(R.font.fluro_regular))
 }

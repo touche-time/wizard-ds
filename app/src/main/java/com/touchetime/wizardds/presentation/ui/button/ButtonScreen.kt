@@ -13,6 +13,7 @@ import com.touchetime.wizard.components.button.WizardButton
 import com.touchetime.wizard.components.button.WizardButtonStyle
 import com.touchetime.wizard.components.text.WizardText
 import com.touchetime.wizard.components.text.WizardTextStyle
+import com.touchetime.wizard.utils.colors.WizardColors
 import com.touchetime.wizard.utils.global.WizardGlobalSpacing
 
 @Composable
@@ -25,7 +26,8 @@ fun ButtonScreen() {
     ) {
         WizardText(
             text = "Buttons",
-            style = WizardTextStyle.displayLarge,
+            textColor = WizardColors.colors().contentPrimary,
+            style = WizardTextStyle.primaryHeadingMiddleBold,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
         )

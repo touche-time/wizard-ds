@@ -11,6 +11,7 @@ import com.touchetime.wizard.components.button.WizardButton
 import com.touchetime.wizard.components.button.WizardButtonStyle
 import com.touchetime.wizard.components.text.WizardText
 import com.touchetime.wizard.components.text.WizardTextStyle
+import com.touchetime.wizard.utils.colors.WizardColors
 import com.touchetime.wizard.utils.global.WizardGlobalSpacing
 import com.touchetime.wizard.utils.theme.ThemeType
 
@@ -22,7 +23,8 @@ fun ThemeScreen(updateTheme: (ThemeType) -> Unit) {
     ) {
         WizardText(
             text = "Themes",
-            style = WizardTextStyle.displayLarge,
+            textColor = WizardColors.colors().contentPrimary,
+            style = WizardTextStyle.primaryHeadingMiddleBold,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
         )
