@@ -3,6 +3,7 @@ package com.touchetime.wizard.utils.global
 import com.touchetime.wizard.utils.primitive.WizardPrimitiveSize
 
 object WizardGlobalSpacing {
+    val none = WizardPrimitiveSize.sizeNone
     val tinier = WizardPrimitiveSize.size20
     val tiny = WizardPrimitiveSize.size40
     val small = WizardPrimitiveSize.size80
